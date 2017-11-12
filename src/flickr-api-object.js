@@ -1,3 +1,4 @@
+const path = require('path')
 /**
  * Construct an API object based on the Flickr API
  * function/parameter pairs in flickr-function-list.js
@@ -24,7 +25,7 @@ module.exports = (function() {
     }
 
     var method_name = methods[method_idx],
-        mdir = "node_modules/flickrapi/flickrapi-data/flickr/methods",
+        mdir = path.join(__dirname, "/data/flickr/methods"),
         filename = mdir + "/" + method_name + ".json";
 
     // advance the progress bar
@@ -126,7 +127,7 @@ module.exports = (function() {
       return parseMethods(flickrOptions, methods, 0, finished);
     };
 
-    var mdir = "./data/flickr",
+    var mdir = path.join(__dirname, "data/flickr"),
         filename = mdir + "/flickr.reflection.getMethods.json";
     if(fs.existsSync(filename)) {
       var methodListing = JSON.parse(fs.readFileSync(filename));
