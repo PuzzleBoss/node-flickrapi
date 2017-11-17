@@ -135,7 +135,6 @@ module.exports = (function() {
     }
 
     // get all functions
-    console.log("Fetching the Flickr API method information architecture.");
     Utils.queryFlickr({
       method: "flickr.reflection.getMethods"
     },

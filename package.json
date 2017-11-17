@@ -1,6 +1,6 @@
 {
   "name": "@puzzleboss/flickrapi",
-  "version": "0.6.3",
+  "version": "0.6.4",
   "author": "Pomax <pomax@nihongoresources.com>",
   "description": "A Node.js, and client-side, implementation of the Flickr API (for use with an API key, server-side oauth enabled)",
   "dependencies": {
